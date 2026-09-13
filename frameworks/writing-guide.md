@@ -42,9 +42,17 @@ Small words that make scripts sound real:
 - "ich mein," "weißt du," "also"
 - "echt," "mega," "krass"
 
-**Use 2-3 per script. Not every sentence.**
+**Use 2–3 per script, mid-sentence.** Not every sentence. Not as a standalone opener before a routine claim (that is staging — see `humanizer.md`).
 
 ---
+
+## Humanize Pass (Mandatory)
+
+After the raw draft, before save: run `frameworks/humanizer.md`.
+
+Keep claims. Kill AI shape (not-X-but-Y, staged openers, one-line closers, forced triads, inflated significance, StoryScope tidy-theme endings). Spoken-word humanifiers stay mid-sentence (2–3). Em dashes still forbidden. Do not invent proof.
+
+Source stack: blader/humanizer + Wikipedia Signs of AI writing + StoryScope structural tells (adapted for ads).
 
 ## Read-Aloud Test
 
