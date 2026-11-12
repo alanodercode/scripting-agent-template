@@ -1,6 +1,6 @@
 # Swipe / inspo library (v0)
 
-First pass built **2026-11-12 17:49 JST** for Alan’s request (via CoS, 12.11.2026 17:05 JST): one library of reference ads clients sent Aditor.
+First pass built **2026-11-12 17:36 JST**; harvest pass 2 checkpoint **17:49–17:53 JST**; concept tags added **17:58 JST** (same day). Alan’s request via CoS, 12.11.2026 17:05 JST: one library of reference ads clients sent Aditor.
 
 Index: [`index.csv`](index.csv) · [`index.json`](index.json). One row per unique ad, deduped by normalized URL.
 
@@ -74,6 +74,76 @@ Index: [`index.csv`](index.csv) · [`index.json`](index.json). One row per uniqu
 - **OK** — local media present and at least one keyframe extracted.
 - **DEAD** — 404 / removed / expired, confirmed on fetch.
 - **INCOMPLETE** + reason — link kept, not downloaded (login/ACL, Meta Ad Library, IG often needs cookies, first-pass cap, named reference without a URL, etc.).
+
+## Concept tags
+
+Added **2026-11-12 17:58 JST**. Every row has `concept_primary`, optional `concept_secondary`, and `concept_evidence` (a short cite of the frame, why-quote, Trello card, or filename that supported the tag). Evidence is required. **UNCLEAR** when evidence is thin — this is not a guess, and a blank is not filled in.
+
+### Method
+
+- Sources consulted, in order: explicit `Format:` / `**Format:**` lines in the source text (describes the swipe itself); Trello card names, attachment names, and why-quotes from `/workspace/swipes-harvest/trello/`; Slack/Drive `why_client_sent_it`; Drive file/folder names; then a visual pass of all **254** framed ads (first frame, `frames/01.jpg`, reviewed as labeled contact sheets). Later frames were not exhaustively reviewed.
+- Tags fire only on concept-defining language or a clear visual cue (on-screen “3 Reasons…”, a designed static still, a microphone at a market, a 3D/2D animated character, first-person product testimony on screen, a how-to title, etc.). A person talking to camera is **not** enough by itself to call UGC, founder, or talking head — those overlap, so the row stays UNCLEAR unless the text or a clear spokesperson setup (e.g. a news desk) decides it.
+- False friends skipped: “in review” / “Tiktok Review 11”, “Dont’s: Memes”, “other statics are getting finished”, Aditor-internal “Demo-Ad”, bare funnel language (“solution aware”), editor-instruction “VO : male” (that is a deliverable note, not the swipe’s format).
+- Secondary is set only when a second concept is also clearly evidenced and is not just an overlap (talking head is not repeated under UGC/founder).
+
+### Taxonomy
+
+Starting set from the 12.11 briefing, plus three extensions that showed up as explicit format labels (`talking head`, `explainer`, `song ad`, `voiceover`). Definitions:
+
+| Concept | Means | Typical evidence |
+|---|---|---|
+| UGC testimonial | Customer/creator talking about using the product, or an explicit UGC label | `UGC`, testimonial, Kundenstimme, creator selfie, first-person product testimony on screen |
+| founder story | The founder is the protagonist / “Founder Ad” | `Founder ADs`, Gründer, “founder story” |
+| problem-solution | Explicit problem→solution structure (not a loose product claim) | `Problem-Solution`, `Problem→Solution Aware` as a format label |
+| us-vs-them | Us vs the alternative / “unlike those other…” | `us-vs-them`, “isn’t like those other…”, on-screen “X vs. Y” comparison |
+| unboxing/demo | Unboxing, how-to, or a product demo of the advertised item | `unboxing`, `product demo`, on-screen “How to…”, product held/demonstrated to camera |
+| listicle | Numbered-list ad | `listicle`, “3 reasons”, “5 things”, “5 SIGNS…”, Hörgeräte-Ranking |
+| before/after | Before/after or Vorher/Nachher transformation | `before vs after`, `vorher/nachher` |
+| skit/meme | Scripted sketch or meme format | `skit`, `skit-dialogue`, `drama skit`, on-screen meme layout — not “Dont’s: Memes” |
+| street interview | Man-on-the-street / vox pop | `street interview`, Straßeninterview, microphone at a market/street |
+| podcast clip | Podcast or podcast-style set | `podcast`, `podcast-style`, `podcast ad` |
+| VSL/advertorial | Video sales letter or advertorial | `VSL`, `Mini VSL`, `advertorial` |
+| static | Designed still / static image ad (not “a JPEG of a video”) | `static ad`, `Statics` folder, designed headline+product still |
+| claymation/animation | Claymation, 2D/3D animation, cartoon, Pixar/Disney-style | `animation`, `cartoon`, `claymation`, `Disney Style`, animated character on frame |
+| green-screen | Green-screen as the format | `green screen`, `greenscreen` |
+| talking head *(extension)* | Person addressing camera as spokesperson, not clearly UGC or founder | `talking head`, `talking-head`, news-anchor desk |
+| explainer *(extension)* | Whiteboard / explainer format | `explainer`, “erklärt … am Whiteboard”, `Whiteboard-Explainer` |
+| song ad *(extension)* | Song / jingle ad (often Suno) | `Suno song ad`, `Suno AI Song Ad` |
+| voiceover *(extension)* | Voiceover is the named format of the swipe (not an editor “VO : male” note) | `Format: … voiceover`, “Third-person VO ad”, “female voiceover narrator” |
+| UNCLEAR | Evidence too thin to pick a concept without guessing | cited as `thin: …` |
+
+### Primary-concept split
+| Concept | n | % of all (n=2514) | % of tagged (n=561) |
+|---|---:|---:|---:|
+| UNCLEAR | 1953 | 77.7% | — |
+| UGC testimonial | 107 | 4.3% | 19.1% |
+| claymation/animation | 95 | 3.8% | 16.9% |
+| VSL/advertorial | 80 | 3.2% | 14.3% |
+| static | 67 | 2.7% | 11.9% |
+| podcast clip | 56 | 2.2% | 10.0% |
+| listicle | 31 | 1.2% | 5.5% |
+| talking head | 23 | 0.9% | 4.1% |
+| unboxing/demo | 23 | 0.9% | 4.1% |
+| street interview | 19 | 0.8% | 3.4% |
+| green-screen | 12 | 0.5% | 2.1% |
+| voiceover | 10 | 0.4% | 1.8% |
+| skit/meme | 9 | 0.4% | 1.6% |
+| founder story | 9 | 0.4% | 1.6% |
+| before/after | 8 | 0.3% | 1.4% |
+| explainer | 5 | 0.2% | 0.9% |
+| song ad | 4 | 0.2% | 0.7% |
+| problem-solution | 2 | 0.1% | 0.4% |
+| us-vs-them | 1 | 0.0% | 0.2% |
+
+**UNCLEAR:** 1953 of 2514 (77.7%). Tagged (any non-UNCLEAR primary): 561 (22.3%).
+
+### Top 3 primary concepts by client
+
+- **Levide** (n=190): UNCLEAR (143), claymation/animation (14), listicle (12)
+- **Bawldy** (n=97): UNCLEAR (80), claymation/animation (8), listicle (3)
+- **Veda Naturals** (n=76): UNCLEAR (25), VSL/advertorial (24), UGC testimonial (10)
+- **EcomPro GmbH** (n=67): UNCLEAR (64), voiceover (2), UGC testimonial (1)
+- **Timothy Mitchum** (n=58): UNCLEAR (46), claymation/animation (4), green-screen (4)
 
 ## Coverage
 
@@ -221,7 +291,7 @@ Method: read-only GET via existing `TRELLO_KEY`/`TRELLO_TOKEN` in `/workspace/ti
 
 ### Slack — workspace `aditorinc` (Alan’s user-Slack connector, U04NRHWBSMT)
 
-Method: **workspace-wide search** (not a full history dump of every channel) via `slack_search_public_and_private`, plus a **full read** of `#inspo` (C0AR859UBSM) and `#format-swipe-inbox` (C0BJC1D3FU2). Searches (paginated, 20/page, sort=timestamp): `ads/library` (complete, 4 pages), `tiktok.com` (complete, 3 pages), `instagram.com/reel` (9 pages, **more remain** — first-pass cap), `instagram.com/p` (2 pages, more remain), `instagram`, `tiktok`, `youtube`, `inspo`, `referenz`, `beispiel`, `swipekit`, files titled inspo. Filters included `has:link`. Slack Connect (55 shared channels) and 175 public/private channels listed; DMs paginated to completion (271 DMs).
+Method: **workspace-wide search** (not a full history dump of every channel) via `slack_search_public_and_private`, plus a **full read** of `#inspo` (C0AR859UBSM) and `#format-swipe-inbox` (C0BJC1D3FU2). Searches (paginated, 20/page, sort=timestamp): `ads/library` (5 pages, complete), `tiktok.com` (3, complete), `instagram.com/reel` (10, complete), `instagram.com/p` (6, complete), `beispiel` (3, complete), `referenz` (2, complete), `swipekit` (1, complete), inspo messages (9, complete), inspo files (4, complete), tiktok keyword (10, complete), youtube (13, complete). `instagram` and `instagram.com` keyword searches were still paginating (page 16 on disk, not yet merged) when harvest paused for concept tagging. Filters included `has:link`. Slack Connect (55 shared channels) and 175 public/private channels listed; DMs paginated to completion (271 DMs). Full 1:1 DM history was not dumped.
 
 Read-only: no posts, comments, reactions, or messages to clients/editors. Known ACL: Slack file `F0AB2Q03ANS` in `#28pilates-aditor-ads` (C09FFKKLJUU) is marked INCOMPLETE (`file_not_found` / external-guest ACL); no workaround.
 
