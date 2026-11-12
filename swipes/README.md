@@ -6,10 +6,10 @@ Index: [`index.csv`](index.csv) · [`index.json`](index.json). One row per uniqu
 
 ## Totals
 
-- **Ads (unique URLs):** 2514
+- **Ads (unique URLs):** 2537
 - **Clients:** 205
-- **With frames:** 254
-- **OK:** 254
+- **With frames:** 277
+- **OK:** 277
 - **DEAD:** 7
 - **INCOMPLETE:** 2253
 
@@ -113,29 +113,29 @@ Starting set from the 12.11 briefing, plus three extensions that showed up as ex
 | UNCLEAR | Evidence too thin to pick a concept without guessing | cited as `thin: …` |
 
 ### Primary-concept split
-| Concept | n | % of all (n=2514) | % of tagged (n=561) |
+| Concept | n | % of all (n=2537) | % of tagged (n=581) |
 |---|---:|---:|---:|
-| UNCLEAR | 1953 | 77.7% | — |
-| UGC testimonial | 107 | 4.3% | 19.1% |
-| claymation/animation | 95 | 3.8% | 16.9% |
-| VSL/advertorial | 80 | 3.2% | 14.3% |
-| static | 67 | 2.7% | 11.9% |
-| podcast clip | 56 | 2.2% | 10.0% |
-| listicle | 31 | 1.2% | 5.5% |
-| talking head | 23 | 0.9% | 4.1% |
-| unboxing/demo | 23 | 0.9% | 4.1% |
-| street interview | 19 | 0.8% | 3.4% |
+| UNCLEAR | 1956 | 77.1% | — |
+| UGC testimonial | 125 | 4.9% | 21.5% |
+| claymation/animation | 95 | 3.7% | 16.4% |
+| VSL/advertorial | 80 | 3.2% | 13.8% |
+| static | 67 | 2.6% | 11.5% |
+| podcast clip | 56 | 2.2% | 9.6% |
+| listicle | 31 | 1.2% | 5.3% |
+| talking head | 23 | 0.9% | 4.0% |
+| unboxing/demo | 23 | 0.9% | 4.0% |
+| street interview | 19 | 0.7% | 3.3% |
 | green-screen | 12 | 0.5% | 2.1% |
-| voiceover | 10 | 0.4% | 1.8% |
-| skit/meme | 9 | 0.4% | 1.6% |
-| founder story | 9 | 0.4% | 1.6% |
-| before/after | 8 | 0.3% | 1.4% |
+| voiceover | 10 | 0.4% | 1.7% |
+| before/after | 10 | 0.4% | 1.7% |
+| skit/meme | 9 | 0.4% | 1.5% |
+| founder story | 9 | 0.4% | 1.5% |
 | explainer | 5 | 0.2% | 0.9% |
 | song ad | 4 | 0.2% | 0.7% |
-| problem-solution | 2 | 0.1% | 0.4% |
+| problem-solution | 2 | 0.1% | 0.3% |
 | us-vs-them | 1 | 0.0% | 0.2% |
 
-**UNCLEAR:** 1953 of 2514 (77.7%). Tagged (any non-UNCLEAR primary): 561 (22.3%).
+**UNCLEAR:** 1956 of 2537 (77.1%). Tagged (any non-UNCLEAR primary): 581 (22.9%).
 
 ### Top 3 primary concepts by client
 
@@ -144,6 +144,7 @@ Starting set from the 12.11 briefing, plus three extensions that showed up as ex
 - **Veda Naturals** (n=76): UNCLEAR (25), VSL/advertorial (24), UGC testimonial (10)
 - **EcomPro GmbH** (n=67): UNCLEAR (64), voiceover (2), UGC testimonial (1)
 - **Timothy Mitchum** (n=58): UNCLEAR (46), claymation/animation (4), green-screen (4)
+- **breakoutlab** (n=28, after Drive-folder ingest): UGC testimonial (20), UNCLEAR (4), before/after (2), claymation/animation (1), podcast clip (1)
 
 ## Coverage
 
@@ -522,6 +523,35 @@ Method: `search(query=inspo)`, `search(query=swipe)`, `search(query="referenz OR
 | aditor/production/vital-growth/_intake/inspo (fb.watch videos + keyframes) | 3 | Folded intake inspo-meta.json and already-downloaded mp4s. |
 | aditor/production/_scratch/ig-dnl/inspo.mp4 (IG DNL-AzDMz3F, Levide) | 1 | Folded already-downloaded IG reel and yt-dlp info.json. |
 | brands/vitalvac/work (Reference A/B/C) | 3 | Folded named references from CS scripts. No URLs present in those files — left INCOMPLETE, not invented. |
+
+
+### Breakoutlab — Milanote board + Drive folder (2026-11-12 18:10 JST)
+
+Client-requested swipe library, read-only, no login, no requests to the client.
+
+**Milanote public share** [`https://app.milanote.com/1UZVip1eSk99dG/ads-swipe-file`](https://app.milanote.com/1UZVip1eSk99dG/ads-swipe-file) (also linked from Trello card B14V2 / SW-0317 with `?p=2iUGKYGWGdQ`): **partially readable**.
+
+- Anonymous curl of the share URL returns HTTP 200 and the HTML shell with `<title>Ads Swipe File</title>` (og:url `https://app.milanote.com/1UZVip1eSk99dG`). The board is a JS app (`static.milanote.com/main-…-modern.js`); card/image/video content is **not** in the HTML.
+- Public JSON exists and answers without a login cookie: `GET https://app.milanote.com/api/boards/1UZVip1eSk99dG` and `GET https://app.milanote.com/api/elements?ids=1UZVip1eSk99dG`. Both return only **three SKELETON** ancestor elements (`1UZVip1eSk99dG`, parent `1TIaRl1HZXQe3i`, root `1PR1kO1sgpyC6e`) with `"childrenReturned": false`. No CARD / LINK / IMAGE / FILE elements, no media URLs, no titles. The ACL public key `p_USymUMDzHgIZcQ` and the pin `p=2iUGKYGWGdQ` do not unlock children. A raw curl of the HTML sets **no cookies** (AWS WAF `challenge.compact.js` is on the page). POST `/api/boards` returns the same HTML shell.
+- **Ads found on the board: unknown (0 extractable).** No new Milanote rows were added. SW-0317 stays as the board URL (INCOMPLETE).
+- **To finish this in a browser** (no Milanote account should be required if the share is public; if a login wall appears, stop — do not ask the client for access):
+  1. Open `https://app.milanote.com/1UZVip1eSk99dG/ads-swipe-file` (and/or with `?p=2iUGKYGWGdQ`) in a normal browser. Wait until cards/images actually render (WAF/recaptcha will complete in the browser).
+  2. DevTools → Network → filter `api/boards` (and `api/elements`). The useful response is JSON with `"childrenReturned": true` **or** a large `elements` object whose `elementType` values include CARD, LINK, IMAGE, FILE — not only SKELETON. Save that response as `milanote_boards.json` (right-click → Save).
+  3. Optionally also save `media-service` / `media.milanote.com` requests (those are the actual file URLs).
+  4. Hand the JSON back; rows can then be added (`client=breakoutlab`, `source_type=milanote`, `source_ref` = the board URL, one row per unique ad URL, same taxonomy, UNCLEAR when thin).
+
+**Google Drive folder** [`1txQuZuIBy2Hqc8mZT3OGFwNOnBFllNyP`](https://drive.google.com/drive/folders/1txQuZuIBy2Hqc8mZT3OGFwNOnBFllNyP) (from SW-0316): **fully readable** via the Drive connector (`list_folder`). Four subfolders:
+
+| Subfolder | What was in it | Indexed as ads | Skipped (not ads) |
+|---|---|---:|---|
+| Batch 11 \| itsashleyyw | 9 videos (raw / clean / Edited/) + before.JPG + after.JPG | 11 | — |
+| Batch 9 \| GabbyUGC | 3 videos + 2 supporting clips | 3 | Additional Clips_.mov, Extra B Roll.mov (B-roll, same rule as STREIFEN: supporting footage, not a separate ad) |
+| Elle Anderson \| UGC | 3 videos | 3 | — |
+| Feb 24 Brittany | 6 videos; empty `@Clearskin` subfolder | 6 | `@Clearskin` (0 files) |
+
+**23 new rows** (SW-2515–SW-2537), all `client=breakoutlab`, `source_type=drive`, `source_ref` = the folder URL, deduped by Drive file id (none were already in the index). Public `uc?export=download` worked (virus-scan confirm form for files ≳100MB). **23/23 OK with frames.** 0 INCOMPLETE, 0 DEAD in this batch. Videos gitignored; frames committed. Existing IDs SW-0001–SW-2514 were not changed. SW-0316 (TikTok profile `@trybreakoutlab`, which mentioned this folder in its why-text) was left as-is.
+
+Concept split for all **breakoutlab** rows (n=28, case-insensitive, including the 5 pre-existing): UGC testimonial (20), UNCLEAR (4), before/after (2), claymation/animation (1), podcast clip (1).
 
 ## First-pass limits / blockers
 
