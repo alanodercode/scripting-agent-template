@@ -1,0 +1,14 @@
+# Keep full videos local so the git repo stays small. Frames (jpg) and the index are committed.
+*.mp4
+*.mov
+*.m4v
+*.webm
+*.mkv
+*.avi
+!frames/
+*.part
+*.ytdl
+*.m4a
+*.mp3
+*.aac
+*.wav
