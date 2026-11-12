@@ -1,17 +1,17 @@
 # Swipe / inspo library (v0)
 
-First pass built **2026-11-12 17:36 JST**; harvest pass 2 checkpoint **17:49–17:53 JST**; concept tags added **17:58 JST** (same day). Alan’s request via CoS, 12.11.2026 17:05 JST: one library of reference ads clients sent Aditor.
+First pass built **2026-11-12 17:36 JST**; harvest pass 2 checkpoint **17:49–17:53 JST**; concept tags added **17:58 JST**; Breakoutlab Drive ingest **18:10 JST**; harvest pass 2 resumed and finished **18:11–18:32 JST** (IG search merge, download+frames, concept retag). Alan’s request via CoS, 12.11.2026 17:05 JST: one library of reference ads clients sent Aditor. Due Fri 13.11 18:00 JST.
 
 Index: [`index.csv`](index.csv) · [`index.json`](index.json). One row per unique ad, deduped by normalized URL.
 
 ## Totals
 
-- **Ads (unique URLs):** 2537
-- **Clients:** 205
-- **With frames:** 277
-- **OK:** 277
-- **DEAD:** 7
-- **INCOMPLETE:** 2253
+- **Ads (unique URLs):** 2641
+- **Clients:** 209
+- **With frames:** 630
+- **OK:** 630
+- **DEAD:** 15 (7 first-pass YouTube + 8 pass-2 YouTube: account terminated / “not available”)
+- **INCOMPLETE:** 1996
 
 ### Top 5 clients by volume
 
@@ -20,26 +20,26 @@ Index: [`index.csv`](index.csv) · [`index.json`](index.json). One row per uniqu
 | drive | 318 |
 | Levide | 190 |
 | Bawldy | 97 |
-| patryk matuszak | 85 |
-| Veda Naturals | 76 |
+| patryk matuszak | 86 |
+| Queenie-ann Blanco | 80 |
 
 ### By platform
 
 | Platform | Ads |
 |---|---:|
-| file | 491 |
-| youtube | 274 |
-| instagram_reel | 260 |
-| meta_ad_library | 221 |
-| google_drive | 220 |
-| tiktok | 210 |
-| instagram_post | 208 |
-| facebook | 150 |
+| file | 493 |
+| instagram_reel | 280 |
+| youtube | 275 |
+| google_drive | 241 |
+| meta_ad_library | 224 |
+| tiktok | 218 |
+| instagram_post | 210 |
+| facebook | 152 |
 | atria | 124 |
+| instagram | 121 |
 | magicbrief | 88 |
 | foreplay | 65 |
 | youtube_shorts | 59 |
-| instagram | 53 |
 | instagram_story | 19 |
 | x | 19 |
 | frameio | 17 |
@@ -57,8 +57,8 @@ Index: [`index.csv`](index.csv) · [`index.json`](index.json). One row per uniqu
 | Source | Ads (primary, after URL dedupe) |
 |---|---:|
 | trello | 1277 |
-| slack | 706 |
-| drive | 514 |
+| slack | 810 |
+| drive | 537 |
 | local_repo | 17 |
 
 ## Layout
@@ -77,11 +77,11 @@ Index: [`index.csv`](index.csv) · [`index.json`](index.json). One row per uniqu
 
 ## Concept tags
 
-Added **2026-11-12 17:58 JST**. Every row has `concept_primary`, optional `concept_secondary`, and `concept_evidence` (a short cite of the frame, why-quote, Trello card, or filename that supported the tag). Evidence is required. **UNCLEAR** when evidence is thin — this is not a guess, and a blank is not filled in.
+Added **2026-11-12 17:58 JST**; pass-2 visual retag of newly framed rows **18:32 JST**. Every row has `concept_primary`, optional `concept_secondary`, and `concept_evidence` (a short cite of the frame, why-quote, Trello card, or filename that supported the tag). Evidence is required. **UNCLEAR** when evidence is thin — this is not a guess, and a blank is not filled in.
 
 ### Method
 
-- Sources consulted, in order: explicit `Format:` / `**Format:**` lines in the source text (describes the swipe itself); Trello card names, attachment names, and why-quotes from `/workspace/swipes-harvest/trello/`; Slack/Drive `why_client_sent_it`; Drive file/folder names; then a visual pass of all **254** framed ads (first frame, `frames/01.jpg`, reviewed as labeled contact sheets). Later frames were not exhaustively reviewed.
+- Sources consulted, in order: explicit `Format:` / `**Format:**` lines in the source text (describes the swipe itself); Trello card names, attachment names, and why-quotes from `/workspace/swipes-harvest/trello/`; Slack/Drive `why_client_sent_it`; Drive file/folder names; then a visual pass of first-pass framed ads (first frame, `frames/01.jpg`, reviewed as labeled contact sheets) and, in pass 2, contact sheets of all **310 UNCLEAR newly-framed** rows (54 stills + 256 videos). Later frames were not exhaustively reviewed. Existing solid text tags were not overridden. 130 of those 310 got a visual tag; 180 stayed UNCLEAR after the frames were looked at.
 - Tags fire only on concept-defining language or a clear visual cue (on-screen “3 Reasons…”, a designed static still, a microphone at a market, a 3D/2D animated character, first-person product testimony on screen, a how-to title, etc.). A person talking to camera is **not** enough by itself to call UGC, founder, or talking head — those overlap, so the row stays UNCLEAR unless the text or a clear spokesperson setup (e.g. a news desk) decides it.
 - False friends skipped: “in review” / “Tiktok Review 11”, “Dont’s: Memes”, “other statics are getting finished”, Aditor-internal “Demo-Ad”, bare funnel language (“solution aware”), editor-instruction “VO : male” (that is a deliverable note, not the swipe’s format).
 - Secondary is set only when a second concept is also clearly evidenced and is not just an overlap (talking head is not repeated under UGC/founder).
@@ -113,34 +113,37 @@ Starting set from the 12.11 briefing, plus three extensions that showed up as ex
 | UNCLEAR | Evidence too thin to pick a concept without guessing | cited as `thin: …` |
 
 ### Primary-concept split
-| Concept | n | % of all (n=2537) | % of tagged (n=581) |
+| Concept | n | % of all (n=2641) | % of tagged (n=711) |
 |---|---:|---:|---:|
-| UNCLEAR | 1956 | 77.1% | — |
-| UGC testimonial | 125 | 4.9% | 21.5% |
-| claymation/animation | 95 | 3.7% | 16.4% |
-| VSL/advertorial | 80 | 3.2% | 13.8% |
-| static | 67 | 2.6% | 11.5% |
-| podcast clip | 56 | 2.2% | 9.6% |
-| listicle | 31 | 1.2% | 5.3% |
-| talking head | 23 | 0.9% | 4.0% |
-| unboxing/demo | 23 | 0.9% | 4.0% |
-| street interview | 19 | 0.7% | 3.3% |
-| green-screen | 12 | 0.5% | 2.1% |
-| voiceover | 10 | 0.4% | 1.7% |
-| before/after | 10 | 0.4% | 1.7% |
-| skit/meme | 9 | 0.4% | 1.5% |
-| founder story | 9 | 0.4% | 1.5% |
-| explainer | 5 | 0.2% | 0.9% |
-| song ad | 4 | 0.2% | 0.7% |
+| UNCLEAR | 1930 | 73.1% | — |
+| UGC testimonial | 154 | 5.8% | 21.7% |
+| static | 120 | 4.5% | 16.9% |
+| claymation/animation | 102 | 3.9% | 14.3% |
+| VSL/advertorial | 80 | 3.0% | 11.3% |
+| podcast clip | 65 | 2.5% | 9.1% |
+| unboxing/demo | 41 | 1.6% | 5.8% |
+| listicle | 32 | 1.2% | 4.5% |
+| talking head | 31 | 1.2% | 4.4% |
+| street interview | 19 | 0.7% | 2.7% |
+| green-screen | 12 | 0.5% | 1.7% |
+| before/after | 12 | 0.5% | 1.7% |
+| voiceover | 11 | 0.4% | 1.5% |
+| skit/meme | 9 | 0.3% | 1.3% |
+| founder story | 9 | 0.3% | 1.3% |
+| explainer | 6 | 0.2% | 0.8% |
+| song ad | 4 | 0.2% | 0.6% |
 | problem-solution | 2 | 0.1% | 0.3% |
-| us-vs-them | 1 | 0.0% | 0.2% |
+| us-vs-them | 2 | 0.1% | 0.3% |
 
-**UNCLEAR:** 1956 of 2537 (77.1%). Tagged (any non-UNCLEAR primary): 581 (22.9%).
+**UNCLEAR:** 1930 of 2641 (73.1%). Tagged (any non-UNCLEAR primary): 711 (26.9%).
 
-### Top 3 primary concepts by client
+### Top 3 primary concepts by client (top 5 by volume, then previously reported clients)
 
+- **drive** (n=318): UNCLEAR (194), static (69), UGC testimonial (21)
 - **Levide** (n=190): UNCLEAR (143), claymation/animation (14), listicle (12)
 - **Bawldy** (n=97): UNCLEAR (80), claymation/animation (8), listicle (3)
+- **patryk matuszak** (n=86): UNCLEAR (83), claymation/animation (2), green-screen (1)
+- **Queenie-ann Blanco** (n=80): UNCLEAR (75), listicle (4), unboxing/demo (1)
 - **Veda Naturals** (n=76): UNCLEAR (25), VSL/advertorial (24), UGC testimonial (10)
 - **EcomPro GmbH** (n=67): UNCLEAR (64), voiceover (2), UGC testimonial (1)
 - **Timothy Mitchum** (n=58): UNCLEAR (46), claymation/animation (4), green-screen (4)
@@ -292,7 +295,7 @@ Method: read-only GET via existing `TRELLO_KEY`/`TRELLO_TOKEN` in `/workspace/ti
 
 ### Slack — workspace `aditorinc` (Alan’s user-Slack connector, U04NRHWBSMT)
 
-Method: **workspace-wide search** (not a full history dump of every channel) via `slack_search_public_and_private`, plus a **full read** of `#inspo` (C0AR859UBSM) and `#format-swipe-inbox` (C0BJC1D3FU2). Searches (paginated, 20/page, sort=timestamp): `ads/library` (5 pages, complete), `tiktok.com` (3, complete), `instagram.com/reel` (10, complete), `instagram.com/p` (6, complete), `beispiel` (3, complete), `referenz` (2, complete), `swipekit` (1, complete), inspo messages (9, complete), inspo files (4, complete), tiktok keyword (10, complete), youtube (13, complete). `instagram` and `instagram.com` keyword searches were still paginating (page 16 on disk, not yet merged) when harvest paused for concept tagging. Filters included `has:link`. Slack Connect (55 shared channels) and 175 public/private channels listed; DMs paginated to completion (271 DMs). Full 1:1 DM history was not dumped.
+Method: **workspace-wide search** (not a full history dump of every channel) via `slack_search_public_and_private`, plus a **full read** of `#inspo` (C0AR859UBSM) and `#format-swipe-inbox` (C0BJC1D3FU2). Searches (paginated, 20/page, sort=timestamp): `ads/library` (5 pages, complete), `tiktok.com` (3, complete), `instagram.com/reel` (10, complete), `instagram.com/p` (6, complete), `beispiel` (3, complete), `referenz` (2, complete), `swipekit` (1, complete), inspo messages (9, complete), inspo files (4, complete), tiktok keyword (10, complete), youtube (13, complete). **`instagram.com` keyword search is complete** (20 pages; page 20 had 7 results and “End of results”, oldest 2023-11-30). **`instagram` keyword search is complete**: pages 1–20 hit Slack’s 20-page search cap (page 21 returned `page_limit_exceeded`; oldest on page 20 was 2024-06-06 19:11 JST); a follow-up with the same keywords and `has:link before:2024-06-06` ran to completion (5 pages, 91 messages, oldest 2023-03-13; a May-2024 gap check returned no results). Filters included `has:link`. Pages 16 onward plus the date-window dumps were merged into the index on 2026-11-12 18:22 JST: **104 new rows (SW-2538–SW-2641)**, existing IDs and concept columns preserved, 0 why-quotes filled. Slack Connect (55 shared channels) and 175 public/private channels listed; DMs paginated to completion (271 DMs). Full 1:1 DM history was not dumped.
 
 Read-only: no posts, comments, reactions, or messages to clients/editors. Known ACL: Slack file `F0AB2Q03ANS` in `#28pilates-aditor-ads` (C09FFKKLJUU) is marked INCOMPLETE (`file_not_found` / external-guest ACL); no workaround.
 
@@ -556,13 +559,65 @@ Concept split for all **breakoutlab** rows (n=28, case-insensitive, including th
 ## First-pass limits / blockers
 
 - Trello: unchanged from v0 (133/133 boards, 0 errors). Existing Player token, GET only.
-- Slack pass 2 finished workspace-wide pagination: ads/library (5 pages, complete), tiktok.com (3, complete), instagram.com/reel (10, complete), instagram.com/p (6, complete), beispiel (3, complete), referenz (2, complete), swipekit (1, complete), inspo messages (9, complete), inspo files (4, complete), tiktok keyword (10, complete), youtube (13, complete). instagram and instagram.com keyword searches still paginating at first-pass-plus (see README after final pages). Full 1:1 DM history still not dumped; DMs covered via the same searches.
+- Slack pass 2 finished workspace-wide pagination, including `instagram` and `instagram.com` keyword searches (see Slack section). Full 1:1 DM history still not dumped; DMs covered via the same searches.
 - Drive pass 2: inspo file search complete (9 pages); swipe file search complete (12 pages); all 21 inspo-named folders + 2 subfolders listed via list_folder (search’s readable:false was not an ACL block). Docs: inspo via search() complete (110 docs); inspiration complete; referenz/beispiel/swipe 7 pages (350 docs) — further pages are almost entirely Gemini meeting notes (snippets only on top 3/page). Two titled inspo docs fully read (AgelessRX UGC Editing Inspo, Insurance Swipe Video Copy).
 - QUELLE.md in three _INSPO strip folders named the original ads (two Atria CDN mp4s, one Meta Ad Library). STREIFEN_*/KONTAKT_* jpgs are cuts of those ads and are not separate index rows.
 - Known Slack ACL: F0AB2Q03ANS in #28pilates-aditor-ads still INCOMPLETE; no workaround.
 - No cookies / no logins. Videos gitignored; frames committed. No writes to Trello, Slack, or Airtable. No messages to clients or editors.
 
+## Harvest pass 2 resume (2026-11-12 18:11–18:32 JST)
+
+Same rules: no cookies, no logins, no Trello/Slack/Airtable writes, no messages to clients or editors, existing IDs not renumbered. The separate Milanote browser pass was left alone (`/workspace/swipes-harvest/milanote-breakoutlab.json` was not touched).
+
+- **IG merge:** 104 new unique URLs (SW-2538–SW-2641) from Slack `instagram` / `instagram.com` pages 16–20 and the `before:2024-06-06` date window. 68 of those are Instagram profile URLs (not a single ad). 21 of 104 downloaded and framed without login (public IG reels/posts); the rest are INCOMPLETE (profiles, Meta Ad Library, IG login, TikTok IP block, yt-dlp timeout).
+- **Download+frames on the 820 pass-2 rows (SW-1695–SW-2514):** public Drive `uc?export=download` (images always; videos ≤80 MB, including virus-scan confirm) + direct HTTP (two Atria CDN mp4s, SW-2472 and SW-2473, both OK) + yt-dlp without cookies. **332 OK with frames** in this window (after dropping 3 false OKs where yt-dlp had fetched a random video from a YouTube *channel* URL — SW-2275 `@alanoderso/videos`, SW-2317 `@alandenkt`, SW-2338 `@sebb` — those are INCOMPLETE: channel URL, not a single ad). **8 DEAD** (YouTube account terminated or “This video is not available”). 71 Drive files returned Google sign-in HTML (not publicly downloadable; 49 of those are images ≤10 MB that Alan’s Drive connector could theoretically fetch later). 96 files skipped as larger than the 80 MB cap (the known Drive corpus in this window is ~108 GB; the largest is 11.27 GB).
+- **Concept retag:** only rows that newly had frames. Text tags already present (e.g. “Aditor House Statics”) were left in place. 130 new visual tags from contact sheets; 180 newly-framed rows stayed UNCLEAR after the frames were looked at.
+- Videos are gitignored; frames are committed. New IDs start at SW-2538 (max at merge time was SW-2537).
+
+### Remaining INCOMPLETE by reason (n=1996)
+
+**Login-needed, by platform (~582):**
+
+| Reason | n |
+|---|---:|
+| Meta Ad Library (no public file) | 223 |
+| YouTube bot-check / cookies (“Sign in to confirm you’re not a bot”) | 220 |
+| Google Drive not publicly downloadable (sign-in HTML / HTML wall) | 72 |
+| Instagram login / “Instagram sent an empty media response” | 16 |
+| TikTok IP-block / cookies / private | 16 |
+| MagicBrief | 15 |
+| Foreplay | 7 |
+| Atria app (CDN mp4s in this window *did* download) | 4 |
+| Frame.io | 4 |
+| Dropbox | 3 |
+| Facebook | 2 |
+| Vimeo (web client needs login) | 1 |
+
+**Other (~1414):**
+
+| Reason | n |
+|---|---:|
+| First-pass leftovers, not retried this pass (SW-0001–1694; “not downloaded this pass” / cloud folder pending) | 1031 |
+| Instagram profile URL, not a single ad (no login to expand) | 101 |
+| File larger than 80 MB cap | 96 |
+| TikTok unsupported URL or unexpected webpage response (not confirmed removed) | ~45 |
+| yt-dlp timeout | 24 |
+| Drive inspo folder listed; contents not fully enumerated this pass | 21 |
+| yt-dlp unable to download (IG story / channel API / similar) | 20 |
+| Drive folder URL (not a single file) | 18 |
+| Instagram post has no video / no formats (carousel or login-walled) | 9 |
+| Slack file (ACL / `file_not_found`; including known F0AB2Q03ANS) | 8 |
+| Drive virus-scan / confirm HTML (older first-pass leftovers) | 6 |
+| Audio file, not a video/static ad | 5 |
+| YouTube channel URL, not a single ad | 3 |
+| YouTube “This video is unavailable” (left INCOMPLETE, not confirmed DEAD, same treatment as SW-0277) | 3 |
+| Named reference only; no original URL | 3 |
+| Downloaded but no frames extracted | 2 |
+| Malformed Facebook URL (`business.facebook.comand`) | 1 |
+| HTTP 429, SSL, IG story expired, yt-dlp non-video output, other one-offs | remainder |
+
 ## What is not in this library
+
 
 - Our own deliverables (`feedback.aditor.ai`, `cdn.gen.aditor.ai`).
 - Generic Google Drive attachments on Trello cards that are not named or described as inspo/swipe/referenz/beispiel.
