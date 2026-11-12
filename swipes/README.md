@@ -1,50 +1,50 @@
 # Swipe / inspo library (v0)
 
-First pass built **2026-11-12 17:36 JST** for Alan’s request (via CoS, 12.11.2026 17:05 JST): one library of reference ads clients sent Aditor.
+First pass built **2026-11-12 17:49 JST** for Alan’s request (via CoS, 12.11.2026 17:05 JST): one library of reference ads clients sent Aditor.
 
 Index: [`index.csv`](index.csv) · [`index.json`](index.json). One row per unique ad, deduped by normalized URL.
 
 ## Totals
 
-- **Ads (unique URLs):** 1694
-- **Clients:** 166
+- **Ads (unique URLs):** 2514
+- **Clients:** 205
 - **With frames:** 254
 - **OK:** 254
 - **DEAD:** 7
-- **INCOMPLETE:** 1433
+- **INCOMPLETE:** 2253
 
 ### Top 5 clients by volume
 
 | Client | Ads |
 |---|---:|
+| drive | 318 |
 | Levide | 190 |
 | Bawldy | 97 |
+| patryk matuszak | 85 |
 | Veda Naturals | 76 |
-| EcomPro GmbH | 67 |
-| Timothy Mitchum | 58 |
 
 ### By platform
 
 | Platform | Ads |
 |---|---:|
-| instagram_reel | 242 |
+| file | 491 |
+| youtube | 274 |
+| instagram_reel | 260 |
 | meta_ad_library | 221 |
+| google_drive | 220 |
 | tiktok | 210 |
-| google_drive | 189 |
-| facebook | 148 |
-| instagram_post | 144 |
-| atria | 118 |
-| youtube | 99 |
-| magicbrief | 73 |
-| file | 61 |
-| foreplay | 58 |
-| youtube_shorts | 38 |
-| instagram | 20 |
-| x | 16 |
-| frameio | 13 |
+| instagram_post | 208 |
+| facebook | 150 |
+| atria | 124 |
+| magicbrief | 88 |
+| foreplay | 65 |
+| youtube_shorts | 59 |
+| instagram | 53 |
+| instagram_story | 19 |
+| x | 19 |
+| frameio | 17 |
 | hookd | 11 |
 | swipekit | 10 |
-| instagram_story | 8 |
 | trendtrack | 4 |
 | tiktok_ad_library | 3 |
 | topads | 3 |
@@ -57,8 +57,8 @@ Index: [`index.csv`](index.csv) · [`index.json`](index.json). One row per uniqu
 | Source | Ads (primary, after URL dedupe) |
 |---|---:|
 | trello | 1277 |
-| slack | 319 |
-| drive | 81 |
+| slack | 706 |
+| drive | 514 |
 | local_repo | 17 |
 
 ## Layout
@@ -227,24 +227,24 @@ Read-only: no posts, comments, reactions, or messages to clients/editors. Known 
 
 | Channel | Type | Slack Connect | Archived | Ads found | ID |
 |---|---|---|---|---:|---|
-| #general | Public Channel |  | No | 0 | C04NE0BNAAK |
-| #random | Public Channel |  | No | 0 | C04NRHWDQAZ |
-| #booked-meetings | Private Channel |  | No | 6 | C04PJAFVAG0 |
-| #editing | Private Channel |  | No | 16 | C05Q89GMT1U |
+| #general | Public Channel |  | No | 2 | C04NE0BNAAK |
+| #random | Public Channel |  | No | 3 | C04NRHWDQAZ |
+| #booked-meetings | Private Channel |  | No | 14 | C04PJAFVAG0 |
+| #editing | Private Channel |  | No | 33 | C05Q89GMT1U |
 | #creditcard | Public Channel |  | No | 1 | C077YAWVBS7 |
 | #wins | Public Channel |  | No | 0 | C07ABD1C37F |
 | #terrahealth-pipeline | Private Channel | Yes (shared externally) | No | 0 | C07KBBQT2TU |
-| #ecompro-pipeline | Private Channel |  | No | 0 | C07LUDQHRRA |
+| #ecompro-pipeline | Private Channel |  | No | 1 | C07LUDQHRRA |
 | #automations | Private Channel |  | No | 0 | C07UL6BAG1Z |
 | #editor-approval | Public Channel |  | No | 0 | C088V00JW20 |
 | #nursebabes-aditor | Private Channel | Yes (shared externally) | No | 1 | C08JDCM5XJN |
-| #oguz-virtual-assistance | Private Channel | Yes (shared externally) | No | 0 | C0979SEAT8A |
+| #oguz-virtual-assistance | Private Channel | Yes (shared externally) | No | 38 | C0979SEAT8A |
 | #tanittabs-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C099KKN3P4M |
-| #alder-x-aditor | Private Channel | Yes (shared externally) | No | 1 | C099T0XV4RL |
+| #alder-x-aditor | Private Channel | Yes (shared externally) | No | 2 | C099T0XV4RL |
 | #freiheitmedia-x-aditor | Private Channel | Yes (shared externally) | No | 23 | C099U1Z2JSW |
 | #scripts | Private Channel |  | No | 0 | C09BVS4E21J |
-| #oguz-specialforces | Private Channel | Yes (shared externally) | No | 0 | C09DTFC0KK2 |
-| #card-feedback | Public Channel |  | No | 3 | C09EQDQQBDY |
+| #oguz-specialforces | Private Channel | Yes (shared externally) | No | 1 | C09DTFC0KK2 |
+| #card-feedback | Public Channel |  | No | 12 | C09EQDQQBDY |
 | #matter-x-aditor | Private Channel |  | No | 0 | C09HEPR72UF |
 | #velantra-pipeline | Private Channel |  | No | 0 | C09J8GGJQTV |
 | #proofbrothers-x-aditor | Private Channel |  | No | 4 | C09L6Q7R3R8 |
@@ -253,16 +253,16 @@ Read-only: no posts, comments, reactions, or messages to clients/editors. Known 
 | #can-we-do-300-ads-i-need-to-know | Private Channel | Yes (shared externally) | No | 0 | C09N7CRQGFQ |
 | #beinfit-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C09NTATFAMB |
 | #purevianaturals-x-aditor | Private Channel |  | No | 0 | C09UK7H2T7A |
-| #purevianaturals-pipeline | Private Channel |  | No | 0 | C09UW408Q4Q |
+| #purevianaturals-pipeline | Private Channel |  | No | 4 | C09UW408Q4Q |
 | #newbies | Private Channel |  | No | 0 | C09V3KU7G77 |
-| #breakoutlab-x-aditor | Public Channel | Yes (shared externally) | No | 2 | C09VD0MAUKY |
-| #douxds-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C0A0P8V1V6D |
+| #breakoutlab-x-aditor | Public Channel | Yes (shared externally) | No | 3 | C09VD0MAUKY |
+| #douxds-x-aditor | Private Channel | Yes (shared externally) | No | 4 | C0A0P8V1V6D |
 | #phycohealth-x-aditor | Public Channel | Yes (shared externally) | No | 0 | C0A0SRC6TS7 |
 | #phycohealth-pipeline | Private Channel |  | No | 0 | C0A1NRDAD25 |
 | #utilisesocial-x-aditor | Public Channel | Yes (shared externally) | No | 0 | C0A1UR837BN |
 | #breakoutlab-pipeline | Private Channel |  | No | 0 | C0A23PE3P1S |
 | #utilisesocial-pipeline | Private Channel |  | No | 0 | C0A285N102E |
-| #aditor-office | Private Channel |  | No | 5 | C0A2UCZU1S7 |
+| #aditor-office | Private Channel |  | No | 6 | C0A2UCZU1S7 |
 | #nuver-x-aditor | Private Channel |  | No | 0 | C0A3LBE9NJK |
 | #syxgott-parfum-x-aditor | Public Channel | Yes (shared externally) | No | 2 | C0A3Z6MV34Z |
 | #syxgott-pipeline | Private Channel |  | No | 0 | C0A4H484Q9Y |
@@ -274,9 +274,9 @@ Read-only: no posts, comments, reactions, or messages to clients/editors. Known 
 | #mysweetsmile-ltd-x-aditor | Public Channel |  | No | 0 | C0A62E3G5KJ |
 | #trimrx-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C0A6DV9LU0Y |
 | #skinbro-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C0A6T6VEX8Q |
-| #gracen-x-aditor | Private Channel | Yes (shared externally) | No | 4 | C0A7FM6PTT8 |
+| #gracen-x-aditor | Private Channel | Yes (shared externally) | No | 7 | C0A7FM6PTT8 |
 | #buchmann-x-aditor | Private Channel | Yes (shared externally) | No | 4 | C0A88GW1XK5 |
-| #oliviamorasch-x-aditor | Private Channel | Yes (shared externally) | No | 1 | C0A8AGNU5B9 |
+| #oliviamorasch-x-aditor | Private Channel | Yes (shared externally) | No | 10 | C0A8AGNU5B9 |
 | #script-to-ugc-video | Public Channel |  | No | 0 | C0A8HQCMTU7 |
 | #buchmann-pipeline | Private Channel |  | No | 0 | C0A8LT6D7TQ |
 | #oliviamorasch-x-pipeline | Private Channel |  | No | 0 | C0A8S08FDEE |
@@ -304,16 +304,16 @@ Read-only: no posts, comments, reactions, or messages to clients/editors. Known 
 | #denny-pipeline | Private Channel |  | No | 0 | C0ASVNWUAAV |
 | #forwardhealthgmbh-x-pipeline | Private Channel |  | No | 0 | C0ATC3EKCMD |
 | #forwardhealthgmbh-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C0ATTALCPM0 |
-| #vibecoding-accountability | Private Channel |  | No | 1 | C0AUDQ97XS8 |
+| #vibecoding-accountability | Private Channel |  | No | 3 | C0AUDQ97XS8 |
 | #dispatch-actions | Private Channel |  | No | 0 | C0B12NE2Y8M |
 | #mynd-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C0B17RYQM1T |
 | #mynd-pipeline | Private Channel |  | No | 0 | C0B1Q59LWF3 |
-| #abdullah-x-aditor | Private Channel | Yes (shared externally) | No | 3 | C0B25E4BS74 |
+| #abdullah-x-aditor | Private Channel | Yes (shared externally) | No | 6 | C0B25E4BS74 |
 | #hellonancy-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C0B5Z8WQY2W |
 | #asset-agent | Private Channel |  | No | 0 | C0B6958UY04 |
 | #carebloom-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C0B753MS7HR |
 | #carebloom-x-pipeline | Private Channel |  | No | 0 | C0B7BETQTNW |
-| #content-pipeline | Private Channel | Yes (shared externally) | No | 5 | C0B83US52FJ |
+| #content-pipeline | Private Channel | Yes (shared externally) | No | 6 | C0B83US52FJ |
 | #freiheit-pipeline | Private Channel |  | No | 0 | C0B8GSCMRQW |
 | #book-club | Private Channel |  | No | 0 | C0BBU7ZM8A3 |
 | #fabiobar-x-aditor | Private Channel | Yes (shared externally) | No | 2 | C0BCYUYU0S3 |
@@ -325,7 +325,7 @@ Read-only: no posts, comments, reactions, or messages to clients/editors. Known 
 | #payroll-cycle | Private Channel |  | No | 0 | C0BQJBS6BQC |
 | #agelessrx-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C0BRTB5914M |
 | #agelessrx-pipeline | Private Channel |  | No | 0 | C0BRV8YNNSJ |
-| #insta-squad | Private Channel |  | No | 0 | C0BSA6LM6EP |
+| #insta-squad | Private Channel |  | No | 1 | C0BSA6LM6EP |
 | #adlingo-news | Private Channel |  | No | 0 | C0BU5NZ2J0H |
 | #bynoria-pipeline | Private Channel |  | No | 0 | C0C08MN2F1R |
 | #bynoria-x-aditor | Private Channel |  | No | 0 | C0C0AF0UQ5T |
@@ -341,14 +341,14 @@ Read-only: no posts, comments, reactions, or messages to clients/editors. Known 
 | #gen-agent-maxxing | Private Channel |  | No | 0 | C0CFME8J9GV |
 | #adktradingfze-pipeline | Private Channel |  | No | 0 | C0CFX92FDKR |
 | #adktradingfze-x-aditor | Private Channel | Yes (shared externally) | No | 0 | C0CGAM5H294 |
-| #glow25 | Private Channel | Yes (shared externally) | No | 0 | C071VCDDRMX |
-| #vedanaturals-creativepipeline | Private Channel | Yes (shared externally) | No | 11 | C07CSJJDMP0 |
+| #glow25 | Private Channel | Yes (shared externally) | No | 3 | C071VCDDRMX |
+| #vedanaturals-creativepipeline | Private Channel | Yes (shared externally) | No | 17 | C07CSJJDMP0 |
 | #plants-are-purple | Public Channel | Yes (shared externally) | No | 0 | C07G80MQ4GH |
 | #aditor-icon | Private Channel | Yes (shared externally) | No | 0 | C08CL3QRV28 |
 | #vitalvac_pipeline | Private Channel | Yes (shared externally) | No | 5 | C08HHAM88DB |
-| #aai-aditorai | Private Channel | Yes (shared externally) | No | 14 | C08JUKWE49F |
+| #aai-aditorai | Private Channel | Yes (shared externally) | No | 32 | C08JUKWE49F |
 | #ext-aditor-captions | Private Channel | Yes (shared externally) | No | 0 | C099VV1EU8Z |
-| #28pilates-aditor-ads | Private Channel | Yes (shared externally) | No | 10 | C09FFKKLJUU |
+| #28pilates-aditor-ads | Private Channel | Yes (shared externally) | No | 11 | C09FFKKLJUU |
 | #veloura-x-aditor | Private Channel | Yes (shared externally) | No | 1 | C09RA094X6J |
 | #lior-creatives | Private Channel | Yes (shared externally) | No | 0 | C0A68H7KMF0 |
 | #aditor-mammaly | Private Channel | Yes (shared externally) | No | 2 | C0ABUCE5T34 |
@@ -360,15 +360,15 @@ Read-only: no posts, comments, reactions, or messages to clients/editors. Known 
 | #joeyfromcic | Private Channel |  | Yes | 0 | C0651MDUMM4 |
 | #joey-editing | Private Channel |  | Yes | 0 | C06B5VDHFT7 |
 | #product | Private Channel |  | Yes | 0 | C07NYGCJH7B |
-| #best-nurse-ever-pipeline | Private Channel |  | Yes | 1 | C07QDGXTRNG |
+| #best-nurse-ever-pipeline | Private Channel |  | Yes | 2 | C07QDGXTRNG |
 | #novasabers-creatives | Private Channel |  | Yes | 0 | C07T76C8E06 |
 | #parrot-ai | Private Channel |  | Yes | 0 | C0890LW4EAW |
 | #parrot-ai8444 | Private Channel |  | Yes | 2 | C08FWC2G87P |
 | #nursebabes-pipeline | Private Channel |  | Yes | 0 | C08JZ7SN33J |
 | #bawldy-pipeline | Private Channel |  | Yes | 10 | C096P1LE7FE |
-| #levide-pipeline | Private Channel |  | Yes | 5 | C0996HCCP4P |
+| #levide-pipeline | Private Channel |  | Yes | 11 | C0996HCCP4P |
 | #korabeta | Private Channel |  | Yes | 0 | C09A65E9YKS |
-| #source-werbeartikel | Private Channel |  | Yes | 7 | C09ETJQE96G |
+| #source-werbeartikel | Private Channel |  | Yes | 15 | C09ETJQE96G |
 | #noaré-x-aditor | Private Channel |  | Yes | 0 | C09GP7VMYCA |
 | #solara-x-aditor | Private Channel |  | Yes | 2 | C09H5Q1UQK0 |
 | #alohaclub-x-aditor | Private Channel |  | Yes | 3 | C09JF41UY8L |
@@ -411,80 +411,36 @@ Method: `search(query=inspo)`, `search(query=swipe)`, `search(query="referenz OR
 
 | Item | Ads found | Method / notes | URL |
 |---|---:|---|---|
-| Jean — 28pilates context pack | 0 | search query=inspo (Google Doc/Sheet listed, links extracted separately) | https://docs.google.com/document/d/1VjwNAEnll4CteZ_8MarQ8LRQWoRFGz_LJLHYiTYbkUk/edit?usp=drivesdk |
-| First Week Setup  – 2026/06/29 16:59 CEST – Notizen von Gemini | 0 | search query=inspo (Google Doc/Sheet listed, links extracted separately) | https://docs.google.com/document/d/1jy-5MZ3XVisGqK-_Jaw79MYW4jqk2vNnvJHbfn-6F48/edit?usp=drivesdk |
-| search query=inspo (files, first 50; nextPageToken present — first-pass cap) | 48 | user-Google-drive search(query=inspo, pageSize=50). Page 2 not fully retrieved this pass. Media files included; Docs lis |  |
-| Static Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1ZTp-kvJARrDQEkk6hiRyWmq700oQ-mG1 |
-| _INSPO | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/179PavTdHaG5GTgQRudXA3PVTVZ5HO2WQ |
-| _INSPO | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1VDTiVZ52eAX_ZqV2kDu12xDiPqvOYkq8 |
-| _INSPO | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1ZDAlhEMTCnJwcDWpkkHOy1Hjkijw8Cvc |
-| Inspo 3 Friends talking | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1Qio5OlyQD5HVedbAnjnwwm3zFr2N4PNj |
-| Aditor House Statics — inspo remakes (Jun 2026) | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1oaF6SvMBk-_opXqYsP9fdMCqppzGZE-1 |
-| Korean Skincare Routine — Roller/Tool Application Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1iJKbxwWcQ7wJoBbqhM3hHswhpJ9Yh5kZ |
-| Moft "best in the world" Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1hZwbV9ZURcWlGNQcSR7KNtryLNiyEimE |
-| Vibit Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1pBiT45q4iDWV_7fVm-5A6U2Rw78WHkN_ |
-| Zima Dental Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1Pl3Kj1vyJGWUWJBc6ZOCGwlCl_zxZsLg |
-| Zima Dental Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1Uq9Q2AfjTfTCbPRMf3G5QUCMg3oniH1x |
-| Lions Mane Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1ru86fGtb4de7Jd1xRyJU-eTU_SFYSw6x |
-| Ryze Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/14Kfd0tMlorhkMIqKcur0bURZ5q6fMmrX |
-| Ultra Cleanse Douxds Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1JE76NU6W_Vfi24JnujhepPbJO3STHQca |
-| Simeon Panda + Overload Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1CyG6778Lh-Kx7YTzlTSiHgfh0-eGNAx6 |
-| douxds inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1Ab-VWW8wbXVBrdEomgmHRkShdcTxcaX9 |
-| Fresh Podcasting Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1xmTn6LDgbwsqBYXLdn27IeH0K25XdWJr |
-| Social Savannah Gifting Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1gDrbtAD4kxZkoD55w7k2fdiOwoWyacir |
-| Inspo_ProductGallery | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1JjZhuviOrhhqDpiirf_REP3D43LiIhgF |
-| LARQ Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1pMpPLUl0JudAp0MW_YfQ8p_cyt27fjlO |
-| Aditor_Ad_Inspo | 1 | user-Google-drive search(query=inspo, mimeType=folder). Folder listed; file listing not completed this pass. | https://drive.google.com/drive/folders/1P-xuwaNquvI97J38zTkeUPrcaWW-5fwl |
-| Jean — 28pilates context pack | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1VjwNAEnll4CteZ_8MarQ8LRQWoRFGz_LJLHYiTYbkUk |
-| First Week Setup  – 2026/06/29 16:59 CEST – Notizen von Gemini | 1 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1jy-5MZ3XVisGqK-_Jaw79MYW4jqk2vNnvJHbfn-6F48 |
-| AglessRX - UGC Editing Inspo | 11 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1aCmSJdDAUm3CsIp7Sn_fjm26gN30qNEPsuY6VnnJaLY |
-| Tim x Alan - Creatives maxxen – 2026/05/18 17:31 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1K6xI5-F-mD1PBWBFUk5nr8nFdEf0YHvSgsDjQiBWoos |
-| Creative Strategist Challenge | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1kjyn5wEU9GQxRK7GcwEOAqOenAJwJ-3xtwkx5CQesP4 |
-| Mike Dodard and Alan Simon – 2025/09/16 02:30 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1_RWX_CAN8T6YsC3GhFgOtMshKvsWzS3yawiIlreMY8E |
-| MAMMALY FRESH SMILE TOPPING | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1-ifTAQ6Hi_QHaNv48skCKu5Wpub7Meoh83_E3RM1Rfs |
-| Mustafa Aziz and Alan Simon – 2026/08/15 10:01 CEST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1xaGCszKOtKhyrAwN-j-TEHjL0OZfMxqv7LEH_dCOY9k |
-| Ryan Grant and Alan Simon – 2025/08/11 16:00 CEST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1U_uYmZFpsYh-W2LFLft5GnsFP_uaVtooVJi7V48mvic |
-| 28pilates scripts | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1MVn2Fvj-4eNl59r_vhFUjwYY8ipaF30J_882_ynVu5o |
-| Maicon x Alan - CS Brief – 2026/09/28 20:34 JST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/158frccrgFaS_9Hk-twQAa4F8U3p9Wskfv76Ivc2fWPc |
-| Wayne Danai and Alan Simon – 2025/08/19 13:00 CEST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1Bgb_ldXE0rKQ1Us_wQsF9Z9tGn8LIMMl_IybKEgJZUQ |
-| Alexander Thelen and Alan Simon – 2026/04/23 18:30 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1BPzvWPvqIiDzvAUGEEgkC-rj2CPUg8vTJnCk8WVvDd0 |
-| Hans and Alan Simon – 2025/08/28 18:57 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1Uden2QedNweKYzQ2JF1ZZavzX7Gw-YJEOEHr9qFJHrY |
-| Tin & Alan 1on1  – 2026/05/08 19:01 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/11ElQ8rKCVLOvSvFFzhKmF3ip914TuZM8KWUm8mNBfA4 |
-| Besprechung gestartet um 2026/10/20 00:38 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1rwXrvIyOcSEJeZQpeQK5oO80sBL17UCpHg63bG11pvo |
-| Shawn x Alan / Operations – 2026/09/24 19:01 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1EwWm4bq2Mrr1U3vNRKsg-OlwNkcezVNHcoK9aYdkNlw |
-| Saskia x Alan / CX – 2026/09/10 21:32 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1nvqpYarojNONMe4WOQYA53r4p-0F7Uj_kagXMm83HMw |
-| Besprechung gestartet um 2026/08/11 19:30 CEST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1886HmGi5_JsEXmwvreYDjxRJEgIIYGZjhPcco5QH5GA |
-| Simon x Alan Catchup  – 2026/04/16 14:11 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1XGjKaiR2k8FVMjlz8rd2BEBMwNVUMs12CDk9uknxfcc |
-| Veda Creative Brainstorming – 2026/05/08 20:30 JST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1-afu8C9IkG8xTD7Jr2C0isEX3NO3M4GXHNY2XqTBvMY |
-| Fabio Bär and Alan Simon – 2026/06/25 14:59 EDT – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1KIuYrYfmeE5oPI5YFJHNdZDo3e2dCbmn3-9GYEJE_YE |
-| Simon molinghen and Alan Simon – 2026/05/04 16:00 JST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1UjPk4ELZ1Q3qZT0WFPAYXRND9ST0UfiF1eqLviQVIRI |
-| manny and Alan Simon – 2026/07/30 21:29 CEST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1TxrhB313rbaRJtin13w-MAKIx-tRpmrt9ov9m8Zc37E |
-| Veda Creative Brainstorming – 2026/06/08 20:31 JST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1pfaZdta9WIUeocFnYUK2woGSYKpihWhJtu3_T_NkNsQ |
-| Rick Kerstens and Alan Simon – 2026/05/12 17:01 JST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1lqnlboAt4co3w0qWnaONgsUIy9oSVQDEETx4-0SyAgY |
-| Moshi Karim and Alan Simon – 2026/07/07 19:31 CEST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/135Zyw9YRi3vtet3hjVDx2bFF6RbbLqQ7QIc0CFoLo9M |
-| SR-103 | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1HKN5sYKZFFEP9x9k0VRS-IyOLm7ZVM2q6lG1uCvwex0 |
-| Aditor: Denis und Alan Simon – 2026/06/22 12:05 EDT – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1NhSFvW-sbtmvusZJHEYW1xsq4S6uZ4fefJnwV2V85u0 |
-| Ben and Alan Simon – 2026/09/14 22:30 JST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/19EA4J3kDrZBguZfJh3QqV0eogS7vpwuWKGtJgr7OpVU |
-| Christmas Statics Copy | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1uIPXbEhlHGRbctYdmcVGpgM-eorkXb6d7MespY2UDAA |
-| Ashley Todd and Alan Simon – 2026/08/27 18:30 CEST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1MX6M_WPbyWO0LmYtjk0nVnvOr4geHznrKp2QMg3XvQo |
-| Bawldy Concept Feedback Summaries | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1Imc4aIuNdADNEuJPO3E1lF-GST368OPRz5gMa3U_IQc |
-| Levide automatic feedback sheet | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/19DqvCxiHarp3EvxYaRLI7TcF2o1n30XZYNa5aPmNEC0 |
-| Steven and Alan Simon – 2026/08/03 14:30 CEST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1wCiPwhVqySpqX0Jx2-RNAJd4VUpiAHflW8RL2t1_mws |
-| Tobias x Alan / Growth – 2026/08/13 13:36 CEST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1JvVTyBqUCmO9-e76O6RNgdZJAibbAh5cXiFUQZg3WUc |
-| Jean x Alan sync – 2026/11/05 23:17 JST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1_oBKcVr7Mk4PreR1G6PaLRrOB7uKdM7UsWBYKdJI4yQ |
-| Mapalo Mwansa and Alan Simon – 2026/04/23 14:28 JST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/11XIOL288IgMIf2XJeN-3qWFR4PpQRk50syja4d2r684 |
-| Brock fayle and Alan Simon – 2025/10/20 09:50 CEST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1A8QL1QCrCakEdwKdkzxKU6v50D2rAutOSo8Yb2nzF_0 |
-| Aditor: Denis und Alan Simon – 2026/06/15 15:02 EDT – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1cYQ5F_LkPFR1Tp-fe5yT90VcJ2O-8hswnYfo3SyRWFw |
-| Erik & Alan – 2025/09/29 18:00 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/19JcWEBMAeJ8TqPhFwW-XEfMgNXrQ961-ewTs29aZHuU |
-| Johannes Ohm and Alan Simon – 2026/04/17 13:00 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1wES7-6Tjk3sIXdMy47TWF4W3bxH8cBu1eOihlK2M304 |
-| Saskia x Alan / UX – 2026/09/24 21:34 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1oWydzm3UnobOwChN72lmAAG44-ThAiUoylxJXiHn5r8 |
-| Tobias x Alan / Growth – 2026/10/22 20:30 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1IyWfaEOmnMU8sw3bibRwcwLqY8tZ8rxRLyYsNEN0SCk |
-| Tobias x Alan / Growth – 2026/10/29 21:30 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1VmZX7PG5k-MEcORkrQlGJwOzKRxu6lnIaAgP38Rq3uM |
-| Hugo Pires and Alan Simon – 2026/06/04 19:00 JST – Notizen von Gemini (Englisch) | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1r7mHXPmquHYCtKhmDrFRJk_tlNFkn1NTS_x_b7jC9JQ |
-| Gordian Fabian and Alan Simon – 2026/08/14 14:00 CEST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1G69BcDpOkhLLU5_pZJKiPqqJQbMZ1fjnR87-ad1G6BI |
-| Aditor: Jarek und Alan Simon – 2026/10/18 21:00 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1FD3QwyIwFOp1KAJgNkaVY2TJ23wPpTQGFeJBlRTkaPw |
-| Tobias x Alan / Growth – 2026/07/09 13:28 CEST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/1et8dkyq3QhCKl69qxuiopShlkMayi2Dn4Ui1kCA0Hkk |
-| Aditor: Maximilian Breuss und Alan Simon – 2026/10/02 00:01 JST – Notizen von Gemini | 0 | user-Google-drive search_files (fullText contains inspo, Google Docs). URLs taken from content snippets only (first 50 d | https://docs.google.com/document/d/199elQKaUTYxNh6_TSdSr4t8oDHN0BWgV1F-8aQnecJk |
+| search query=inspo (all pages, complete) + search query=swipe (all pages, complete) | 363 | user-Google-drive search(query=inspo, pageSize=50) pages 1–9 complete; search(query=swipe) pages 1–12 complete. Media fi |  |
+| Inspo_3_Friends_New | 4 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Social_Savannah | 4 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Aditor_House_Statics | 15 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| LARQ | 10 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Static_Inspo | 25 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| douxds_inspo | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Vibit | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Lions_Mane | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Fresh_Podcasting | 4 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| _INSPO_1ZDAlhE | 0 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| _INSPO_1VDTiVZ | 0 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| _INSPO_1VDTiVZ | 0 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Aditor_Ad_Inspo | 18 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Ryze | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Moft_V1 | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Simeon_Panda | 4 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Best_Performers | 8 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Ultra_Cleanse_Douxds | 4 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Moft | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Inspo_ProductGallery | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Korean_Skincare | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Zima_Uq9Q | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Zima_Pl3K | 3 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| Inspo_3_Friends | 4 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| _INSPO_179PavTd | 0 | user-Google-drive list_folder (pageSize=200). readable:false on search was a search flag — list_folder succeeded for all |  |
+| QUELLE.md in three _INSPO production-strip folders (Denis) | 3 | user-Google-drive read_file on QUELLE.md. Each folder is one source ad; STREIFEN frames are cuts of that ad, not separat |  |
+| docs_agelessrx_ugc.txt | 11 | user-Google-drive read_file (full text). |  |
+| docs_insurance_swipe.txt | 0 | user-Google-drive read_file (full text). |  |
+| Google Docs: fullText inspo (search() pages 1–3 complete, 110 docs) + inspiration (pages 1–3 complete) + referenz/beispiel/swipe (7 pages / 350 docs; further pages are almost all Gemini meeting notes, snippets only on top 3 per page) | 15 | search_files / search with snippetVerbosity=DETAILED (top 3 snippets/page) plus two full read_file calls on titled inspo |  |
 
 ### Local CS-repo + production media already on the box
 
@@ -499,14 +455,12 @@ Method: `search(query=inspo)`, `search(query=swipe)`, `search(query="referenz OR
 
 ## First-pass limits / blockers
 
-- Trello: complete (133/133 boards, 0 errors). Sanctioned read path: existing Player `TRELLO_KEY`/`TRELLO_TOKEN` in `/workspace/tim-editor-ops/.trello.env`, GET only. No new tokens, no cookie scraping.
-- Slack Instagram reel search stopped after 9 pages (~180 messages, more pages available). Instagram post search after 2 pages. YouTube search is noisy (internal “Alan YouTube” reports) and was only lightly paginated — YouTube links on Trello cards are included. Full 1:1 history of every DM was not dumped; DMs were covered via the same workspace-wide searches.
-- Drive: inspo file search has a next page not fully fetched; Doc search first 50 only; inspo folder contents not enumerated (several `readable: false`). Public `uc?export=download` worked for some images/smaller videos; large Glow25 files returned Google sign-in HTML and were marked INCOMPLETE (fakes discarded).
-- yt-dlp first pass completed for YouTube, YouTube Shorts, TikTok, and Vimeo (348 URLs attempted). Direct HTTP also tried for `file` / trendtrack and public Drive. Instagram and Facebook posts were not batch-downloaded this pass (login/cookies). Some TikTok short URLs were malformed (`tiktok.com/?_r=1`) and stay INCOMPLETE. Private TikTok accounts are INCOMPLETE (ACL), not DEAD.
-- No sanctioned browser-cookie path. IG / Meta Ad Library / Frame.io / many Drive files remain INCOMPLETE until a logged-in download is approved.
-- Known Slack ACL: file `F0AB2Q03ANS` in `#28pilates-aditor-ads` (C09FFKKLJUU) is INCOMPLETE (`file_not_found` / external-guest ACL); no workaround.
-- Videos are gitignored; frames (jpg) and the index are committed. Re-extract frames from local `video.mp4` if needed.
-- Wednesday / client messaging: none. No writes to Trello, Slack, or Airtable. No messages to clients or editors.
+- Trello: unchanged from v0 (133/133 boards, 0 errors). Existing Player token, GET only.
+- Slack pass 2 finished workspace-wide pagination: ads/library (5 pages, complete), tiktok.com (3, complete), instagram.com/reel (10, complete), instagram.com/p (6, complete), beispiel (3, complete), referenz (2, complete), swipekit (1, complete), inspo messages (9, complete), inspo files (4, complete), tiktok keyword (10, complete), youtube (13, complete). instagram and instagram.com keyword searches still paginating at first-pass-plus (see README after final pages). Full 1:1 DM history still not dumped; DMs covered via the same searches.
+- Drive pass 2: inspo file search complete (9 pages); swipe file search complete (12 pages); all 21 inspo-named folders + 2 subfolders listed via list_folder (search’s readable:false was not an ACL block). Docs: inspo via search() complete (110 docs); inspiration complete; referenz/beispiel/swipe 7 pages (350 docs) — further pages are almost entirely Gemini meeting notes (snippets only on top 3/page). Two titled inspo docs fully read (AgelessRX UGC Editing Inspo, Insurance Swipe Video Copy).
+- QUELLE.md in three _INSPO strip folders named the original ads (two Atria CDN mp4s, one Meta Ad Library). STREIFEN_*/KONTAKT_* jpgs are cuts of those ads and are not separate index rows.
+- Known Slack ACL: F0AB2Q03ANS in #28pilates-aditor-ads still INCOMPLETE; no workaround.
+- No cookies / no logins. Videos gitignored; frames committed. No writes to Trello, Slack, or Airtable. No messages to clients or editors.
 
 ## What is not in this library
 
